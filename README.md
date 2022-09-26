@@ -1,6 +1,6 @@
 # Course Site Template 2022
 
-This repository contains website template suitable to host course notes and handouts.
+This repository contains website template suitable to host course notes and handouts. Currently, it's populated with materials from CSE 50.005 as example.
 
 ## General setup
 
@@ -15,7 +15,7 @@ bundle exec jekyll serve
 
 You can then browse to localhost: http://127.0.0.1:4000
 
-### \_config.yml
+### `_config.yml`
 
 Important parts to edit:
 
