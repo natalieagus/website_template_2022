@@ -1,0 +1,145 @@
+header:
+  - title: Home
+    url: /index.html
+  - title: OSNotes
+    url: /os_notes/week1_intro
+    key: os_notes
+  - title: OSLabs
+    url: /os_labs/lab1_intro
+    key: os_labs
+  - title: NSLabs
+    url: /ns_labs/lab1_1
+    key: ns_labs
+  - title: Assignments
+    url: /assignments/pa1_1_intro
+    key: assignments
+
+os_notes:
+  - title: Basics of OS
+    children:
+      - title: Introduction to OS
+        url: /os_notes/week1_intro
+      - title: The Kernel
+        url: /os_notes/week1_kernel
+      - title: Resource Allocator and Coordinator
+        url: /os_notes/week1_resource
+      - title: Memory and Process Management
+        url: /os_notes/week1_mpm
+  - title: OS Structure
+    children:
+      - title: OS Services and UI
+        url: /os_notes/week2_serviceui
+      - title: System Calls
+        url: /os_notes/week2_syscall
+      - title: Structure and Design
+        url: /os_notes/week2_designstructure
+  - title: Processes and Threads
+    children:
+      - title: Process Scheduling
+        url: /os_notes/week3_intro
+      - title: Operation on Processes
+        url: /os_notes/week3_operations
+      - title: IPC
+        url: /os_notes/week3_comms
+      - title: Threads
+        url: /os_notes/week3_threads
+  - title: Synchronisation
+    children:
+      - title: The Race Condition
+        url: /os_notes/week4_synchronization
+      - title: Solutions
+        url: /os_notes/week4_solutions
+      - title: Java Sync
+        url: /os_notes/week4_javasync
+  - title: Deadlock
+    children:
+      - title: Introduction
+        url: /os_notes/week5_deadlock
+      - title: Deadlock Handling
+        url: /os_notes/week5_handling
+  - title: File System
+    children:
+      - title: Basics of File
+        url: /os_notes/week6-1_filesystem
+      - title: Directories and Links
+        url: /os_notes/week6-2_directories
+
+ns_notes:
+  - title: Week 1
+    children:
+      - title: Overview
+        url: /ns_notes/overview
+
+os_labs:
+  - title: Lab 1
+    children:
+      - title: Introduction
+        url: /os_labs/lab1_intro
+      - title: CLI Basics
+        url: /os_labs/lab1_cls
+      - title: Scripts and Compilation
+        url: /os_labs/lab1_sc
+  - title: Lab 2
+    children:
+      - title: The TOC/TOU Bug
+        url: /os_labs/lab2_intro
+      - title: Vulnerable Root Program
+        url: /os_labs/lab2_vulnerableprog
+      - title: Bug Fix
+        url: /os_labs/lab2_fix
+  - title: Lab 3
+    children:
+      - title: Banker's Algorithm
+        url: /os_labs/lab3_intro
+      - title: Submission Procedure
+        url: /os_labs/lab3_submission
+
+ns_labs:
+  - title: Lab 1
+    children:
+      - title: Ping
+        url: /ns_labs/lab1_1
+      - title: Traceroute
+        url: /ns_labs/lab1_2
+  - title: Lab 2
+    children:
+      - title: Introduction
+        url: /ns_labs/lab2_1-intro
+      - title: Text Encryption
+        url: /ns_labs/lab2_2-sym-txt
+      - title: Image Encryption
+        url: /ns_labs/lab2_3-sym-img
+      - title: Message Digest
+        url: /ns_labs/lab2_4-sign
+  - title: Lab 3
+    children:
+      - title: DNS with dig
+        url: /ns_labs/lab3_1-intro
+      - title: DNS Hierarchy
+        url: /ns_labs/lab3_2-hierarchy-caching
+      - title: Wireshark
+        url: /ns_labs/lab3_3-wireshark
+
+assignments:
+  - title: PA1 - Shell
+    children:
+      - title: Overview
+        url: /assignments/pa1_1_intro
+      - title: Shell Creation
+        url: /assignments/pa1_2_shell
+      - title: System Program
+        url: /assignments/pa1_3_sysprogs
+      - title: Daemon Processes
+        url: /assignments/pa1_4_daemons
+  - title: PA2 - Secure FTP
+    children:
+      - title: Overview
+        url: /assignments/pa2_1_intro
+      - title: Authentication Protocol
+        url: /assignments/pa2_2_ap
+      - title: Confidentiality Protocol
+        url: /assignments/pa2_3_cp
+      - title: Submission
+        url: /assignments/pa2_4_submit
+      - title: Python Cryptography
+        url: /assignments/pa2_5_crypto

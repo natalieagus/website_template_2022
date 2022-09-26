@@ -1,0 +1,118 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
+## => Site Settings
+##############################
+text_skin_alt: "dark"
+highlight_theme_alt: "tomorrow-night"
+text_skin: "default"
+highlight_theme: "tomorrow"
+url: # e.g: if you use github-pages, use https://username.github.io
+baseurl: # e.g: /course-code
+title: AB.CDE Course Website
+description:
+  > # some tagline for your course. ">" this means to ignore newlines until "Language & timezone"
+  We can explain it to you, but we can't understand it for you.
+
+## => Language and Timezone
+##############################
+lang: en # the language of your site, default as "en"
+
+## => Paths
+##############################
+paths:
+  root: # title link url, "/" (default)
+  home: # home layout url, "/" (default)
+  archive: # "/archive.html" (default)
+  rss: # "/feed.xml" (default)
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+
+## license
+license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+
+## TOC
+toc:
+  selectors: "h1,h2,h3" # (default)
+
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
+
+## Mermaid
+mermaid: true # false (default), true
+
+## Chart
+chart: true # false (default), true
+
+## => Comments
+##############################
+comments:
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+  ## Google Custom Search Engine
+  google:
+    custom_search_engine_id: # Google Custom Search Engine ID
+
+## => Build
+##############################
+markdown: kramdown
+highlighter: rouge
+permalink: date
+
+exclude:
+  - CHANGELOG.md
+  - HOW_TO_RELEASE.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+
+collections:
+  assignments:
+    output: true
+  os_notes:
+    output: true
+  ns_notes:
+    output: true
+  os_labs:
+    output: true
+  ns_labs:
+    output: true
+## => Plugins
+##############################
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
