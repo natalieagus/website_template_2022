@@ -90,7 +90,7 @@ For instance,
 
 `/Users/natalie_agus/Downloads` simply look like this in the window:
 
-<img src="/assets/images/lab1/2.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/2.png"  class="center_full"/>
 
 If your directory has spaces in its name, you need to use the **backslash**) to indicate that it is part of the string, eg:
 `/Users/natalie_agus/Google\ Drive`
@@ -109,7 +109,7 @@ Now try another command called `cd` to **change** the current working directory:
 - The command cd is analogous to **double clicking** a folder in the GUI
 - You can go “back” to one previous directory level using the command `cd ..` (or you can chain it to go two levels up for instance, `cd ../..`
 
-<img src="/assets/images/lab1/3.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/3.png"  class="center_full"/>
 
 ## Environment Variables
 
@@ -129,7 +129,7 @@ For example:
 
 In the example below, the environment variable `$MESSAGE1` initially did not exist. After we `export` it, we can now print the environment variable `$MESSAGE1`.
 
-<img src="/assets/images/lab1/4.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/4.png"  class="center_fifty"/>
 
 ## $PATH Variable
 
@@ -141,7 +141,7 @@ One of the most important environment variables you’ll work with on the comman
 
 For example, you can add the **binary** of the **Telegram** app onto the `$PATH` using the command `export`, and now you can simply execute it from anywhere (a new Telegram window is opened on the second Telegram command):
 
-<img src="/assets/images/lab1/5.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/5.png"  class="center_seventy"/>
 
 ### Task 4
 
@@ -149,7 +149,7 @@ For example, you can add the **binary** of the **Telegram** app onto the `$PATH`
 
 Open that folder (from your Desktop GUI) and navigate to that path. **You may need to enable viewing of hidden files.** If you are using WSL, you need to cd to this path as there’s no GUI. The screenshot below shows the content of `/bin/` directory where some default system programs like `ps, date, pwd, echo,` etc reside:
 
-<img src="/assets/images/lab1/6.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/6.png"  class="center_seventy"/>
 
 # Configuring a Terminal Session
 
@@ -186,14 +186,14 @@ bash-3.2$
 
 An `alias` lets you create a **shortcut** name for a command, file name, or any shell text. By using aliases, you save a lot of time when doing tasks you do frequently. You can see current aliases using the `alias` command:
 
-<img src="/assets/images/lab1/7.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/7.png"  class="center_seventy"/>
 
 Or **create** an alias:
 
 - `alias name=’command’`
 - Example: `alias gst=’git status’`
 
-<img src="/assets/images/lab1/8.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/8.png"  class="center_seventy"/>
 
 `alias` is particularly useful when you define them in your shell’s setup script.
 {:.info}
@@ -297,7 +297,7 @@ You can open any created text file using the command:
 - Then you can start typing as per normal
 - Press <span style="color:#f7007f;"><b>Ctrl + X</b></span> to exit, and then **Enter** to save
 - You can press **Ctrl + G** as well to bring up the shortcut menu anytime during editing
-  <img src="/assets/images/lab1/9.png"  class="center_seventy"/>
+  <img src="{{ site.baseurl }}/assets/images/lab1/9.png"  class="center_seventy"/>
 - After saving, you can check back the content of the file using the command `cat <path/to/filename>`
 
 ## Standard Streams
@@ -311,16 +311,16 @@ Streams are usually connected to the **terminal** in which they are executed. By
 
 When you run a python script, e.g: `python3 playground.py`,
 
-<img src="/assets/images/lab1/10.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/10.png"  class="center_seventy"/>
 * **Input** from your keyboard is passed from the terminal into the python process, and 
 * **Output** from your python process is passed back to your terminal **display**. Here’s a simplified illustration:
-<img src="/assets/images/lab1/11.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/11.png"  class="center_seventy"/>
 
 Where are these “files” for stdin, stdout, and stderr respectively?
 
 Well, they’re **created** by your OS. You can witness this pretty easily if you run a python script on one terminal (and let it hang there, don’t let it terminate yet! Shown on the right side), find out its process id and then see its details on another terminal (shown on the left) using the `lsof` command.
 {:.info}
-<img src="/assets/images/lab1/12.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/12.png"  class="center_full"/>
 
 You can see in the last three lines that stdin (0u), stdout (1u), and stderr (2u) all point to the file `/dev/ttys004`. **This is the file that is created by the OS and watched by our terminal**.
 
@@ -344,7 +344,7 @@ Try typing `cat` on the command line and press enter:
 The standard error (`stderr`) is the place where error messages go. Try this command that will prompt an error such as: `cat <inexistent_path/to/filename>`.
 
 What is the output that you see? Similar to stdout, stderr is printed directly to your screen by your shell.
-<img src="/assets/images/lab1/13.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/13.png"  class="center_fifty"/>
 
 ### Stream Redirection
 
@@ -381,7 +381,7 @@ This is because tr **CANNOT** get input directly from a file. It only reads from
 4.  What if we want to write back to `test.txt`? What can you deduce from the output?
 
 Perhaps the screenshot below might help you for steps 1-7 above.
-<img src="/assets/images/lab1/14.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/14.png"  class="center_seventy"/>
 
 ## Pipe
 
@@ -395,10 +395,10 @@ It may sound similar to stream redirection, but the general rule of thumb is tha
 `TASK 7:`{:.info} Try out how to pipe:
 
 1. Suppose we want to pass the want to pass the output of `cat` command as the input of `sort` command. We can’t do this with redirection:
-   <img src="/assets/images/lab1/15.png"  class="center_seventy"/>
+   <img src="{{ site.baseurl }}/assets/images/lab1/15.png"  class="center_seventy"/>
 
 2. However, using **pipe** works. It serves as a way to allow **interprocess** communication (Week 3 materials):
-   <img src="/assets/images/lab1/16.png"  class="center_seventy"/>
+   <img src="{{ site.baseurl }}/assets/images/lab1/16.png"  class="center_seventy"/>
 
 ## Download Files using `curl`
 
@@ -428,7 +428,7 @@ A filter takes input from one command, does some processing, and gives output.
 - `grep "<string>” <path/to/file>`
 - For example: `grep “GNU” GPL-3` prints every line containing “GNU” word.
 - Some shells don't require the quotation marks for single-word search, so you can try `grep GNU GPL-3` as well.
-  <img src="/assets/images/lab1/17.png"  class="center_seventy"/>
+  <img src="{{ site.baseurl }}/assets/images/lab1/17.png"  class="center_seventy"/>
 
 Here are the common grep options to try:
 
@@ -440,8 +440,8 @@ The `<string> `argument of the grep command can accept **regex** too, for instan
 
 - `grep "^[A-Z]" GPL-3 -n`
 - This search for every line starting with **capital** letters
-  <img src="/assets/images/lab1/18.png"  class="center_seventy"/>
+  <img src="{{ site.baseurl }}/assets/images/lab1/18.png"  class="center_seventy"/>
 
 You can also **pipe** the output of a command to the `grep` command so that you can filter it out. For example, `ps -ax` will report all running processes in your system (by all users, including your own). If we want to filter some processes by name, we can use grep and pipe to filter the Telegram process: `ps -ax | grep -i Telegram`
 
-<img src="/assets/images/lab1/19.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/19.png"  class="center_seventy"/>

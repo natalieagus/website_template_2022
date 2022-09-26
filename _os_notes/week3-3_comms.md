@@ -66,7 +66,7 @@ printf("Data read from memory: %s\n", str);
 ```
 
 The figure below illustrates the steps above:
-<img src="/assets/images/week3/13.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/week3/13.png"  class="center_full"/>
 
 Once both processes no longer need to communicate, they can detach the shared memory from their address space:
 
@@ -226,9 +226,9 @@ For processes in the same machine as shown in the figure above, both processes c
 2. Then, when P2 tries to read from the socket, that message in the kernel space is copied again to P2’s space via `read` system call.
 
 The diagram below illustrates how socket works in general:
-<img src="/assets/images/week3/15.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/week3/15.png"  class="center_fifty"/>
 
-<img src="/assets/images/week3/14.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/week3/14.png"  class="center_full"/>
 
 ### Program: IPC using Socket {#code-ipc-using-socket}
 
@@ -396,7 +396,7 @@ int main(int argc, char const *argv[])
 <span style="color:#f77729;"><b>Message Queue </b></span>is just another <span style="color:#f77729;"><b>interface</b></span> for message passing (another example being socket as shown in the previous section). It uses system call `ftok, msgget, msgsnd, msgrcv` each time data has to be passed between the processes. [`msgrcv` and `msgsnd`](https://man7.org/linux/man-pages/man2/msgsnd.2.html) can be made <span style="color:#f77729;"><b>blocking</b></span> or <span style="color:#f77729;"><b>non blocking</b></span> depending on the setup.
 
 The figure below illustrates the general idea of Message Queue. The queue data structure is maintain by the Kernel, and processes may write into the queue at any time. If there are more than 1 writer and 1 reader at any instant, careful planning has to be made to ensure that the <span style="color:#f77729;"><b>right</b></span> message is obtained by the right process.
-<img src="/assets/images/week3/16.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/week3/16.png"  class="center_full"/>
 
 <span style="color:#f77729;"><b>Writer</b></span> process program:
 

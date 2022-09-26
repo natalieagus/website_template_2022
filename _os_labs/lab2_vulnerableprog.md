@@ -93,7 +93,7 @@ We <span style="color:#f77729;"><b>exaggerate</b></span> the `DELAY` between:
 ```
 
 Consider the `vulnerable_root_prog` being called by a user to modify a text file <span style="color:#f77729;"><b>belonging</b></span> to the user account as such:
-<img src="/assets/images/lab2/11.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/11.png"  class="center_seventy"/>
 
 The `access()` check of course grants the normal user caller to modify `userfile.txt` because indeed it <span style="color:#f77729;"><b>belongs</b></span> to the normal user (<span style="color:#f77729;"><b>ubuntu</b></span> in the screenshot above).
 
@@ -126,7 +126,7 @@ ln -s <source> <symlink>
 ```
 
 In this example below, we created a `goodmorning_symlink.txt` that <span style="color:#f77729;"><b>points</b></span> to the actual file `goodmorning.txt`:
-<img src="/assets/images/lab2/12.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/12.png"  class="center_seventy"/>
 
 ## Exploiting the TOCTOU Bug with SymLink
 
@@ -136,7 +136,7 @@ During this <span style="color:#f77729;"><b>delay</b></span> between <span style
 2. Since `fopen` only checks <span style="color:#f77729;"><b>effective</b></span> user ID, and `vulnerable_root_prog` has its `SUID` bit <span style="color:#f77729;"><b>set</b></span> (runs <span style="color:#f77729;"><b>effectively</b></span> as `root` despite being called by only normal user), the “supposedly secure” <span style="color:#f77729;"><b>rootprog</b></span> can end up allowing normal user to gain elevated privileges to <span style="color:#f77729;"><b>MODIFY</b></span> protected file like `/etc/shadow`.
 
 In the screenshot below, we created a <span style="color:#f77729;"><b>symbolic link</b></span> `userfile.txt` to point to `/etc/shadow`, resulting in the regular user being unable to `cat userfile.txt`.
-<img src="/assets/images/lab2/13.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/13.png"  class="center_seventy"/>
 
 We have written the program to create the symbolic link for you. It is inside `/User/symlink.c`.
 
@@ -205,15 +205,15 @@ cd User
 ./exploit.sh
 ```
 
-<img src="/assets/images/lab2/17.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/17.png"  class="center_full"/>
 
 The program will run for <span style="color:#f77729;"><b>awhile</b></span> (20-30 secs) and eventually <span style="color:#f7007f;"><b>stop</b></span> with such message:
 
-<img src="/assets/images/lab2/18.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/18.png"  class="center_full"/>
 
 If you do a `cat /etc/shadow` right now, notice how `test-user-0` account hashed password section has been changed to match that `replacement_text` in `vulnerable_root_prog`:
 
-<img src="/assets/images/lab2/19.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/19.png"  class="center_full"/>
 
 ## Login to target user account
 
@@ -222,7 +222,7 @@ If you do a `cat /etc/shadow` right now, notice how `test-user-0` account hashed
 `TASK :`{:.info} Login to user account `test-user-0` with password `00000`
 Now you can login to `test-user-0` account with <span style="color:#f77729;"><b>password</b></span>: `00000` instead of your originally set password:
 
-<img src="/assets/images/lab2/20.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/lab2/20.png"  class="center_full"/>
 
 We have <span style="color:#f77729;"><b>successfully</b></span> changed a supposedly <span style="color:#f7007f;"><b>protected</b></span> `/etc/shadow` file while logged in as a <span style="color:#f77729;"><b>regular user</b></span> (ubuntu in the example above).
 

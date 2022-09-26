@@ -101,7 +101,7 @@ The diagram below gives the basis of a possible authentication protocol. Take no
 
 The size of `M1` is designed to be not more than `8` bytes. The next section will explain this in more detail.
 
-<img src="/assets/images/pa2/1.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/pa2/1.png"  class="center_seventy"/>
 
 The server (SecureStore) has the following items to encrypt/decrypt messages from the client when necessary:
 

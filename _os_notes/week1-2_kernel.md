@@ -41,7 +41,7 @@ You have learned this before as well, i.e: `PC31` in the Beta CPU indicates whet
 
 ## Hardware Support for Dual Mode Operation {#dual-mode-operation}
 
-<img src="/assets/images/week1/4.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/week1/4.png"  class="center_fifty"/>
 
 The dual mode is possible <span style="color:#f7007f;"><b>iff</b></span> it is supported by the hardware. The kernel is also **uninterruptible** and this interruptible feature is also supported by the hardware.
 {:.info}
@@ -86,7 +86,7 @@ After the firmware is loaded onto the main memory through hardwired procedures, 
 4. When the system boots, the hardware starts in the **kernel mode**. After being loaded, the Kernel will perform the majority of system setups (driver init, memory management, interrupts, etc). Afterwards, the rest of the OS is loaded and then user processes are started in _<span style="color:#f77729;"><b>user mode</b></span>_.
 
 The figure below summarises the booting process:
-<img src="/assets/images/week1/5.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week1/5.png"  class="center_seventy"/>
 
 Note that the figure is heavily simplified for illustration purposes only.
 
@@ -99,7 +99,7 @@ There are **two** types of hardware in the computer system that are capable of r
 
 Each I/O device is managed by an autonomous hardware entity called the **<span style="color:#f77729;"><b>device controllers</b></span>** as shown in the figure below:
 
-<img src="/assets/images/week1/6.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week1/6.png"  class="center_seventy"/>
 
 In other words, I/O devices and the CPU can execute **instructions** in parallel. They are independent of one another and are <span style="color:#f7007f;"><b>asynchronous</b></span>
 {:.info}
@@ -108,7 +108,7 @@ In other words, I/O devices and the CPU can execute **instructions** in parallel
 
 A system must have **device drivers installed** for each device type. This driver is a specific program to <span style="color:#f7007f;"><b>interpret</b></span> the behavior of each device type. We typically install/download _device drivers_ when we plug in **new** I/O units to our computers through the USB port.
 
-<img src="/assets/images/week1/7.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week1/7.png"  class="center_seventy"/>
 
 It provides a software **interface** to hardware devices so that the device controller is able to communicate with the OS or an application program.
 {:.info}

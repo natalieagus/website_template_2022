@@ -788,7 +788,7 @@ void *consumer_function(void *arg)
 
 Paste the two functions above before `main()`. After you compile and run the code, you should have an output as such where consumer thread nicely prints out the numbers put into the buffer by producer in sequence (and stops at 100):
 
-<img src="/assets/images/week4/2.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week4/2.png"  class="center_seventy"/>
 
 [^1]: An operation acting on shared memory is atomic if it completes in a single step relative to other threads. For example, when an atomic store is performed on a shared variable, no other thread/process can observe the modification half-complete.
 [^2]: You know this as a non-preemptive approach, and some kernels are non-preemptive (non-interruptible) and therefore will not face the race condition in the kernel level itself.

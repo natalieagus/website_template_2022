@@ -134,7 +134,7 @@ The starter code provided to you implements a <span style="color:#f77729;"><b>si
 
 The screenshot below shows how client process can send files to the server process, when both are hosted in the same computer:
 
-<img src="/assets/images/pa2/4.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/pa2/4.png"  class="center_seventy"/>
 
 You can also host the Server file in another computer:
 
@@ -174,7 +174,7 @@ In this handout, we assume that `python3` is <span style="color:#f77729;"><b>alw
 {:.error}
 
 That is, if you type `python3` in the terminal, you'll see at least version 3.10 printed out:
-<img src="/assets/images/pa2/5.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/pa2/5.png"  class="center_seventy"/>
 
 The <span style="color:#f7007f;"><b>autograder</b></span> file also uses `python3` instead of `python3.10`. You can modify it to call `python3.10` instead accordingly.
 

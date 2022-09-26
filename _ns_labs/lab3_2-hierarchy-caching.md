@@ -54,6 +54,6 @@ You should disable recursion and follow the referrals manually. Take note of all
 > Repeat the query a few times after waiting for a few seconds. Also, search what each <span style="color:#f77729;"><b>query option</b></span> does.
 
 You might have such output:
-<img src="/assets/images/nslab3/7.png"  class="center_full"/>
+<img src="{{ site.baseurl }}/assets/images/nslab3/7.png"  class="center_full"/>
 
 Do you observe a _pattern_ in the `TTL` field? (e.g: `TTL` value is reducing or increasing, or wrapped around).

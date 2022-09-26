@@ -70,7 +70,7 @@ bash-3.2$
 From the task above, you have just created and run a super simple bash script. Note that the first line is the [shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>). Similar to coding in any other language, you can use variables, functions, conditional statements, loops, comparisons, etc in your bash script. You can learn more in your own time, and see [examples of awesome bash scripts](https://github.com/awesome-lists/awesome-bash).
 
 For example, you can [customize your prompt](https://github.com/arialdomartini/oh-my-git) in a git repo:
-<img src="/assets/images/lab1/20.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/20.png"  class="center_seventy"/>
 
 ## Compiling Programs
 
@@ -94,7 +94,7 @@ Read all the `.c` and `.h` files and get an understanding of what each file is s
 
 Experiment with the program a little bit. You should see a prompt for you to key in a number. Simply type something and press enter.
 
-<img src="/assets/images/lab1/21.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/21.png"  class="center_seventy"/>
 
 In case you haven't connected the dots, `gcc` compiles all the input argument files: `main.c, hello.c, factorial.c, binary.c` and produces a binary **output** (this is what `-o` means) named `prog.o` which you can execute using `./prog.o `.
 
@@ -163,16 +163,16 @@ Run this command consecutively:
 - `make prog2`
 
 You should see the following output on your terminal as a result of `make prog2`:
-<img src="/assets/images/lab1/22.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/22.png"  class="center_fifty"/>
 
 Now open `binary.c` in the `nano` and add another instruction in it, eg a `printf` function at the end:
-<img src="/assets/images/lab1/23.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/23.png"  class="center_fifty"/>
 
 When you try to `make prog2` again, the output shows that we only compile files concerning `binary.c` and <span style="color:#f7007f;"><b>not all files are recompiled</b></span>. Scroll down to the end of the makefile, and notice there’s **implicit** rules there to determine dependencies.
 
-<img src="/assets/images/lab1/24.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/24.png"  class="center_fifty"/>
 
 This gives more **efficient** compilation. It only recompiles parts that are changed. The Figure below shows the data dependency between files that are specified in the makefile.
 Note: `File_1` → `File_2` means that `File_2` depends on `File_1`.
 
-<img src="/assets/images/lab1/25.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/lab1/25.png"  class="center_seventy"/>

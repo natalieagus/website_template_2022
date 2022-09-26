@@ -150,10 +150,10 @@ The graph description:
 ### Example 1
 
 Suppose a system has the following <span style="color:#f77729;"><b>state</b></span>:
-<img src="/assets/images/week5/1.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week5/1.png"  class="center_seventy"/>
 
 The resource allocation graph illustrating those states is as follows:
-<img src="/assets/images/week5/2.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week5/2.png"  class="center_seventy"/>
 
 ### Analysing the Graph
 
@@ -176,4 +176,4 @@ In Example 1 diagram above, the **three** processes are deadlocked (process and 
 
 Now consider the another system state below. Although _there are cycles_, this is <span style="color:#f7007f;"><b>not</b></span> a deadlocked state because `P1` might eventually release `R2` after its done, and `P3` may acquire it and complete. Finally, `P2` may resume to completion after `P3` is done.
 
-<img src="/assets/images/week5/3.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week5/3.png"  class="center_seventy"/>

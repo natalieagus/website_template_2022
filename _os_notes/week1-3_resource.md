@@ -70,7 +70,7 @@ Modern computer systems are **<span style="color:#f7007f;"><b>interrupt-driven</
 
 The figure below summarises the **interrupt-driven** procedure of **asynchronous I/O handling** during **<span style="color:#f7007f;"><b>hardware interrupt</b></span>**:
 
-<img src="/assets/images/week1/9.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week1/9.png"  class="center_seventy"/>
 
 Notes:
 
@@ -115,7 +115,7 @@ Two things may happen from here after we have stored the new input to the RAM:
 
 Firstly, this image says it all.
 
-<img src="/assets/images/week1/10.png"  class="center_fifty"/>
+<img src="{{ site.baseurl }}/assets/images/week1/10.png"  class="center_fifty"/>
 
 Sometimes user processes are <span style="color:#f77729;"><b>blocked</b></span> from execution because it requires inputs from IO devices, and it may **not be scheduled** until the presence of the required input arrives. For example, this is what happens if you wait for user input in Python:
 
@@ -140,7 +140,7 @@ Traps are **software generated interrupts**, that is some special instructions t
 
 The CPU is forced to go to a special handler that does a state save and then execute (may not be immediate!) on the proper interrupt service routine to handle the <span style="color:#f7007f;"><b>request</b></span> (e.g: fetch user input in the python example above) in kernel mode. Software interrupts generally have <span style="color:#f77729;"><b>low priority</b></span>, as they are not as urgent as devices with limited buffering space.
 
-<img src="/assets/images/week1/11.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/week1/11.png"  class="center_seventy"/>
 
 During the time between system call request until system call return, the program execution is <span style="color:#f7007f;"><b>paused</b></span>. Examples of system calls are: `chmod(), chdir(), print()`. More Linux system calls can be found [here](http://man7.org/linux/man-pages/man2/syscalls.2.html).
 
@@ -148,7 +148,7 @@ During the time between system call request until system call return, the progra
 
 Consider another scenario where you want to open a **very large file** from disk. It takes some time to <span style="color:#f7007f;"><b>load</b></span> (simply transfer your data from disk to the disk controller), and your CPU can proceed to do other tasks in the meantime. Here's a simplified timeline:
 
-<img src="/assets/images/week1/12.png"  class="cenetr_full"/>
+<img src="{{ site.baseurl }}/assets/images/week1/12.png"  class="cenetr_full"/>
 
 Imagine that at first, the CPU is busy executing process instructions in user mode. At the same time, the device is idling.
 
@@ -215,7 +215,7 @@ In the hardware, a timer is generally implemented by a **fixed-rate clock** and 
 
 Exceptions are <span style="color:#f77729;"><b>software interrupts</b></span> that occur due to <span style="color:#f7007f;"><b>errors</b></span> in the instruction: such as division by zero, invalid memory accesses, or attempts to access kernel space illegally. This means that the CPU's hardware may be designed such that it checks for the presence of these <span style="color:#f7007f;"><b>serious</b></span> errors, and immediately invokes the appropriate handler via a pre-built <span style="color:#f7007f;"><b>event-vector table</b></span>. Below is an example of ARMv8-M event vector table. The table is typically implemented in the <span style="color:#f77729;"><b>lower</b></span> physical addresses in many architecture.
 
-<img src="/assets/images/week1/13.png"  class="center_seventy" title="Image taken from https://developer.arm.com/documentation/100701/0200/Exception-properties"/>
+<img src="{{ site.baseurl }}/assets/images/week1/13.png"  class="center_seventy" title="Image taken from https://developer.arm.com/documentation/100701/0200/Exception-properties"/>
 
 Each exception has an ID (associated number), a vector <span style="color:#f77729;"><b>address</b></span> that is the exception <span style="color:#f77729;"><b>entry</b></span> point in memory, and a <span style="color:#f77729;"><b>priority</b></span> level which determines the order in which multiple pending exceptions are handled. In ARMv8-M, the lower the priority number, the higher the priority level.
 

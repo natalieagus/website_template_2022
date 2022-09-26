@@ -22,7 +22,7 @@ Note that if traceroute doesn’t work on your VM, you may:
 
 Here is an example of the output produced when traceroute is used to trace the route taken by a packet to www.mit.edu:
 
-<img src="/assets/images/nslab1/1.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/nslab1/1.png"  class="center_seventy"/>
 
 The first line of the traceroute output describes what the command is set for.
 
@@ -71,21 +71,21 @@ In this exercise, you will run traceroute in two <span style="color:#f77729;"><b
 
 In the screenshot below, that will be 31.204.145.131 for example.
 
-<img src="/assets/images/nslab1/2.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/nslab1/2.png"  class="center_seventy"/>
 
 You’re free to use other similar sites if [the site suggested above](https://www.uptrends.com/tools/traceroute) is blocked in your network, or if you have two devices with different IPs (e.g: one uses VPN), then you can also traceroute each other’s IP addresses.
 {:.warning}
 
 You can <span style="color:#f77729;"><b>check</b></span> who that remote host is using the command `whois [ip address]`, for instance, 31.204.145.131 is indeed described as being in Tokyo.
 
-<img src="/assets/images/nslab1/4.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/nslab1/4.png"  class="center_seventy"/>
 
 ### Task 8
 
 `TASK 8:`{:.info} On your computer, run `traceroute` using the IP address recorded in the previous step as the remote destination.
 
 For instance,
-<img src="/assets/images/nslab1/3.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/nslab1/3.png"  class="center_seventy"/>
 
 ## Final Thoughts
 

@@ -17,8 +17,8 @@ text_skin_alt: "dark"
 highlight_theme_alt: "tomorrow-night"
 text_skin: "default"
 highlight_theme: "tomorrow"
-url: # e.g: if you use github-pages, use https://username.github.io
-baseurl: # e.g: /course-code
+url: https://natalieagus.github.io # e.g: if you use github-pages, use https://username.github.io
+baseurl: /website_template_2022 # e.g: /course-code
 title: AB.CDE Course Website
 description:
   > # some tagline for your course. ">" this means to ignore newlines until "Language & timezone"

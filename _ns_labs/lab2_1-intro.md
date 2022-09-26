@@ -74,7 +74,7 @@ In this lab, you're only required to modify all the 3 python files. You don't ne
 ## Test the Starter Code
 
 Running the three `.py` files at this point should give you the following printouts stating that you havent implemented the relevant tasks:
-<img src="/assets/images/nslab2/1.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/nslab2/1.png"  class="center_seventy"/>
 
 ## Debug Notes
 
@@ -96,7 +96,7 @@ In this handout, we assume that `python3` is <span style="color:#f77729;"><b>alw
 {:.error}
 
 That is, if you type `python3` in the terminal, you'll see at least version 3.10 printed out:
-<img src="/assets/images/pa2/5.png"  class="center_seventy"/>
+<img src="{{ site.baseurl }}/assets/images/pa2/5.png"  class="center_seventy"/>
 
 ### Module Not Found
 

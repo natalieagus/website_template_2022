@@ -126,7 +126,9 @@ It's useful to add HTML snippets if you're using VSCode, for instance:
   },
   "Image block": {
     "prefix": "imageblock",
-    "body": ["<img src=\"$1\"  class=\"center_seventy$2\"/>$3"],
+    "body": [
+      "<img src=\"{{ site.baseurl }}$1\"  class=\"center_seventy$2\"/>$3"
+    ],
     "description": "custom image block"
   },
   "Image vanilla block": {
@@ -167,6 +169,8 @@ It's useful to add HTML snippets if you're using VSCode, for instance:
   }
 }
 ````
+
+### Shortcuts
 
 ...and then bind them with keyboard shortcuts:
 
@@ -224,5 +228,29 @@ It's useful to add HTML snippets if you're using VSCode, for instance:
     "command": "editor.action.insertSnippet",
     "args": { "name": "Task block" },
     "when": "editorTextFocus && markdownShortcuts:enabled"
+  },
+```
+
+### Paste Image
+
+To paste images conveniently, the extension [Paste Image](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image) and [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) are particularly useful.
+
+The settings that I use for Paste Image in my project is:
+
+```
+  "pasteImage.path": "${projectRoot}/assets/images/${currentFileNameWithoutExt}",
+  "pasteImage.basePath": "${projectRoot}",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.prefix": "/", // change this if we have projects that require baseURL
+  "pasteImage.insertPattern": "${imageFilePath}",
+```
+
+and it's bound to the shortcut:
+
+```
+  {
+    "key": "ctrl+alt+v",
+    "command": "extension.pasteImage",
+    "when": "editorTextFocus"
   },
 ```
