@@ -52,3 +52,57 @@ Installing VM + Ubuntu 22.04 is the easiest option if you have no experience. Th
 
 If you really do not know how to do it, please contact Natalie via Telegram. She will gladly help you and is open to help you discuss alternative options with regards to your career 😉.
 {:.error}
+
+## Testing of diagrams and math
+
+```mermaid
+graph TB;
+    A[Do you have a problem in your life?]
+    B[Then don't worry]
+    C[Can you do something about it?]
+    A--no-->B;
+    A--yes-->C;
+    C--no-->B;
+    C--yes-->B;
+```
+
+<table>
+<tr>
+<th> Rule </th> <th> Parse tree </th> <th> Symbols </th> <th> Input </th>
+</tr>
+<tr> <td> (5) </td>
+
+<td>
+<div class="mermaid">
+graph
+  J-->LB["{"]
+  J-->NS
+  J-->RB["}"]
+</div>
+</td>
+
+<td>
+ <u>{ </u> NS }
+</td>
+
+<td>
+ <u>{ </u> ' k  1 ' : 1 , ' k 2 ' : [ ] }
+</td>
+
+</tr>
+</table>
+
+$$
+\begin{array}{rcl}
+first(\epsilon, G) & = & \{\} \\
+first(t,G) & = & \{t\} \\
+first(N,G) & = & \bigcup_{N::=\overline{\sigma} \in G} first(\overline{\sigma},G) \\
+first(\sigma\overline{\sigma},G) & = &
+  \left [
+    \begin{array}{ll}
+      first(\sigma,G) \cup first(\overline{\sigma},G) & {\tt if}\ null(\sigma,G) \\
+      first(\sigma,G) & {\tt otherwise}
+      \end{array}
+  \right .
+\end{array}
+$$
